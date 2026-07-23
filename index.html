@@ -1,223 +1,363 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Urban Yard</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div class="welcome-screen">
-            <h1>Urban Yard</h1>
-        <img src="https://scontent.flun2-1.fna.fbcdn.net/v/t39.30808-1/313252757_481138120716330_4732118144747385974_n.jpg?stp=dst-jpg_tt6&cstp=mx2001x2015&ctp=s200x200&_nc_cat=103&ccb=1-7&_nc_sid=2d3e12&_nc_eui2=AeGPSfbgSuaoofRNGume4O9M122GcGjdpDbXbYZwaN2kNsArdR8UquDqy8Fk1yNpwOFw93CeBkBTz4iljc2UYH7l&_nc_ohc=XDlgLG15SEYQ7kNvwF156xt&_nc_oc=AdrYEzU8l-vviISjEEf6GWRiLWBYF5XqkxCttVclwywWVig8Uu5k0yq99fqjRQEmXv8&_nc_zt=24&_nc_ht=scontent.flun2-1.fna&_nc_gid=2vZ0Q-uSIgpnpXSoxyBlwQ&_nc_ss=7b2a8&oh=00_AQCFUHjM7j2mxmJ6t0XgKIZTwLxUjQGEYCWCm9bLUdEs4g&oe=6A532B27" alt="Urban Yard">
-        <nav aria-label="Main navigation">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#about-us">About Us</a></li>
-                <li><a href="#specials">Specials</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        </div>
+      <h1>Urban Yard</h1>
+      <img
+        src="data:image/jpeg;base64,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"
+        alt="Urban Yard"
+      />
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#about-us">About Us</a></li>
+          <li><a href="#specials">Specials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
     <header>
-            <h1>Urban Yard</h1>
-        <nav aria-label="Main navigation">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#about-us">About Us</a></li>
-                <li><a href="#specials">Specials</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        </div>
+      <h1>Urban Yard</h1>
+      <button
+        class="hamburger"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        <span></span><span></span><span></span>
+      </button>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#about-us">About Us</a></li>
+          <li><a href="#specials">Specials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <section id="home">
-            <div class="slide"></div>
-            <div class="slide"></div>
-            <div class="slide"></div>
-            <div class="slide"></div>
-            <h2><i>Fresh Seafood. Wood-Fired Pizza. Lusaka's Favourite Yard.</i></h2>
-            <h3><i>A dining experience like no other - casual atmosphere, exceptional food</i></h3>
-            <a href="#menu" class="btn">Explore Menu</a>
-            <a href="#contact" class="btn">Reserve a Table</a>
+      <section id="home">
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <h2>
+          <i>Fresh Seafood. Wood-Fired Pizza. Lusaka's Favourite Yard.</i>
+        </h2>
+        <h3>
+          <i
+            >A dining experience like no other - casual atmosphere, exceptional
+            food</i
+          >
+        </h3>
+        <a href="#menu" class="btn">Explore Menu</a>
+        <a href="#contact" class="btn">Reserve a Table</a>
+      </section>
+      <section id="specials">
+        <h2>Specials</h2>
+        <div id="specials-cards">
+          <figure>
+            <figcaption>Seafood Platter</figcaption>
+            <p>
+              Delicious selection of fresh seafood, perfectly seasoned and
+              cooked to perfection.
+            </p>
+            <data value="320.00" class="product-price">ZMW320.00</data>
+            <img
+              src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHZxzqWQkCZY5YyciMsmRGgj_PBn-aIIL0fVBcBC2u5Z0T2Nl1lYxjmJKL8T-8yKOy2hmOGT9I2q7l5rcgGS08gkQGy7DYZmPUOeO7O0XtcKYpTUpSup0Gxh9IsPDqd6ih-sQKx=s1360-w1360-h1020-rw"
+              alt="Seafood Platter"
+            />
+          </figure>
+          <figure>
+            <figcaption>Wood-Fired Pizza</figcaption>
+            <p>
+              Authentic wood-fired pizza, made with the finest ingredients and
+              baked to perfection.
+            </p>
+            <data value="280.00" class="product-price">ZMW280.00</data>
+            <img
+              src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFZxxlwlaZaiFTW9M6nxcqJDAm658A6RpF98qIrcwcIvvZBwdQlro7SZgfzx6hEJM4i_yQVMLaWjfaT8zjXmTBwOU1n-1hFWgN0ZnO9XyAYNTlLqChbjDupxp7702fS3XLsC82G=s1360-w1360-h1020-rw"
+              alt="Wood-Fired Pizza"
+            />
+          </figure>
+          <figure>
+            <figcaption>Cocktails & Drinks</figcaption>
+            <p>
+              Refreshing cocktails and a variety of drinks to complement your
+              meal.
+            </p>
+            <data value="100.00" class="product-price">ZMW100.00</data>
+            <img
+              src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAG4NsA8TQur_9rgrrLW86FJijpKXSNaB6rspMIU1CRppGKdZKEj3ZM4UmfWhZdg0JutmALSu6bXuPJo-plEs5hNg7n233gVMH1kbpb9QLey9gSUM1j6-Jf_g1CsBy8msWvt7r4=w1276-h1264-rw"
+              alt="Cocktails & Drinks"
+            />
+          </figure>
+        </div>
+      </section>
+      <section id="menu">
+        <h2>Menu</h2>
+        <section class="seafood">
+          <h3>Seafood</h3>
+          <figure>
+            <figcaption>Crayfish</figcaption>
+            <p>Fresh and flavorful crayfish, cooked to perfection.</p>
+            <data value="320.00" class="product-price">ZMW320.00</data>
+            <img
+              src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHdLKmouIUtRzcDo2J8Z_LvQifdfXpRJsmBCEu2oCuNzqsdyKM9g8heqpYuGZYVc6y1O_rkyl0HFWwAhXq_cpof6tF4IkTmPj3r5I2ST8dEEPzRYJVXQqZEttlbDpyR_qQqkyyX=s1360-w1360-h1020-rw"
+              alt="Crayfish"
+            />
+          </figure>
+          <figure>
+            <figcaption>Stuffed Calamari</figcaption>
+            <p>
+              Lightly fried calamari filled with a delicious mixture of herbs
+              and spices.
+            </p>
+            <data value="160.00" class="product-price">ZMW160.00</data>
+            <img
+              src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAE34Qb04u8QNSEILPFw3c3AFIk2WM0Q7iOQS0F5q7RbLor2fPe-f7orTLn5D1E8VAZHKFcF7NTxna5NmRbS6luv6xXafotzQvXg8y1BVE0mlJ3_8X-6__oyjOL9I90XbV0W-Xs=s1360-w1360-h1020-rw"
+              alt="Stuffed Calamari"
+            />
+          </figure>
+          <figure>
+            <figcaption>Chicken with Salmon Fillet Cube</figcaption>
+            <p>Grilled chicken served with a side of salmon fillet cubes.</p>
+            <data value="110.00" class="product-price">ZMW110.00</data>
+            <img
+              src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHVzAhTP7lTsUMPWjTmYVm4giRVzmJHz5SVmW3vVW8_47ro5K3_8wgFEqsJLQmQs6DCDW2LIJl38ENmLbpDXrQyF5HB6Yr32Nl4eryvG9QBMfDyJMQC2qcUw1A5k2gruGBq2BqJJw=s1360-w1360-h1020-rw"
+              alt="Chicken with Salmon Fillet Cube"
+            />
+          </figure>
         </section>
-        <section id="specials">
-            <h2>Specials</h2>
-            <div id="specials-cards">
-                <figure>
-                    <figcaption>Seafood Platter</figcaption>
-                    <p>Delicious selection of fresh seafood, perfectly seasoned and cooked to perfection.</p>
-                    <data value="320.00" class="product-price">ZMW320.00</data>
-                    <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHZxzqWQkCZY5YyciMsmRGgj_PBn-aIIL0fVBcBC2u5Z0T2Nl1lYxjmJKL8T-8yKOy2hmOGT9I2q7l5rcgGS08gkQGy7DYZmPUOeO7O0XtcKYpTUpSup0Gxh9IsPDqd6ih-sQKx=s1360-w1360-h1020-rw" alt="Seafood Platter">
-                </figure>
-                <figure>
-                    <figcaption>Wood-Fired Pizza</figcaption>
-                    <p>Authentic wood-fired pizza, made with the finest ingredients and baked to perfection.</p>
-                    <data value="280.00" class="product-price">ZMW280.00</data>
-                    <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFZxxlwlaZaiFTW9M6nxcqJDAm658A6RpF98qIrcwcIvvZBwdQlro7SZgfzx6hEJM4i_yQVMLaWjfaT8zjXmTBwOU1n-1hFWgN0ZnO9XyAYNTlLqChbjDupxp7702fS3XLsC82G=s1360-w1360-h1020-rw" alt="Wood-Fired Pizza">
-                </figure>
-                <figure>
-                    <figcaption>Cocktails & Drinks</figcaption>
-                    <p>Refreshing cocktails and a variety of drinks to complement your meal.</p>
-                    <data value="100.00" class="product-price">ZMW100.00</data>
-                    <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAG4NsA8TQur_9rgrrLW86FJijpKXSNaB6rspMIU1CRppGKdZKEj3ZM4UmfWhZdg0JutmALSu6bXuPJo-plEs5hNg7n233gVMH1kbpb9QLey9gSUM1j6-Jf_g1CsBy8msWvt7r4=w1276-h1264-rw" alt="Cocktails & Drinks">
-                </figure>
-            </div>
+        <section class="grilled-fried">
+          <h3>Grilled &amp; Fried</h3>
+          <figure>
+            <figcaption>Pork Chops</figcaption>
+            <p>Juicy pork chops grilled to perfection.</p>
+            <data value="320.00" class="product-price">ZMW320.00</data>
+            <img
+              src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFQafn4BCX_LxqhF8rQH344H9B6gqguclJOp0aDNf1NIGu8yudMmNDu9gl7j9MH2bqdvgBlKeK_ZaTHY0ZZInQgyRBfv_WbCK_98iQnF_9cSmJohwPNAlhTWXCGFMEBjdADOAw=s1360-w1360-h1020-rw"
+              alt="Pork Chops"
+            />
+          </figure>
+          <figure>
+            <figcaption>
+              500g Tbone Steak with Cinnamon Butternut Squash
+            </figcaption>
+            <p>
+              Tender t-bone steak served with a side of cinnamon butternut
+              squash.
+            </p>
+            <data value="160.00" class="product-price">ZMW160.00</data>
+            <img
+              src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFD0QGNbp2x797l--KPd8SPuHY-ba9R1CEuzYQ5grAQzT4FTxQptm7EehP1gGAxS7mmhao34O_ymxJ2nM8FJaXv75IzItJ-g3S2JRUL33yvc6DYPo1BJZyf_BJruT38iNRZUOYJ=s1360-w1360-h1020-rw"
+              alt="500g Tbone Steak with Cinnamon Butternut Squash"
+            />
+          </figure>
+          <figure>
+            <figcaption>Fillet &amp; Fries</figcaption>
+            <p>Fillet with a side of crispy fries.</p>
+            <data value="110.00" class="product-price">ZMW110.00</data>
+            <img
+              src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAErTPCnaBosKOhYNx-iC-X3mAmsxi1DdPnXN8uCaNDafkhzkDM9C2Mf8WHs1MQXcsVSUOc08OEioABZKGhyVhyHBxk2pTxnDy4sa8Zzfpy9afIm68UPDx647X4TCwaUiKGInW_9=s1360-w1360-h1020-rw"
+              alt="Fillet & Fries"
+            />
+          </figure>
         </section>
-        <section id="menu">
-            <h2>Menu</h2>
-                <section class="seafood">
-                    <h3>Seafood</h3>
-                <figure>
-                    <figcaption>Crayfish</figcaption>
-                    <p> Fresh and flavorful crayfish, cooked to perfection.</p>
-                    <data value="320.00" class="product-price">ZMW320.00</data>
-                    <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHdLKmouIUtRzcDo2J8Z_LvQifdfXpRJsmBCEu2oCuNzqsdyKM9g8heqpYuGZYVc6y1O_rkyl0HFWwAhXq_cpof6tF4IkTmPj3r5I2ST8dEEPzRYJVXQqZEttlbDpyR_qQqkyyX=s1360-w1360-h1020-rw" alt="Crayfish">
-                </figure>
-                <figure>
-                    <figcaption>Stuffed Calamari</figcaption>
-                    <p>Lightly fried calamari filled with a delicious mixture of herbs and spices.</p>
-                    <data value="160.00" class="product-price">ZMW160.00</data>
-                    <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAE34Qb04u8QNSEILPFw3c3AFIk2WM0Q7iOQS0F5q7RbLor2fPe-f7orTLn5D1E8VAZHKFcF7NTxna5NmRbS6luv6xXafotzQvXg8y1BVE0mlJ3_8X-6__oyjOL9I90XbV0W-Xs=s1360-w1360-h1020-rw" alt="Stuffed Calamari">
-                </figure>
-                <figure>
-                    <figcaption>Chicken with Salmon Fillet Cube</figcaption>
-                    <p>Grilled chicken served with a side of salmon fillet cubes.</p>
-                    <data value="110.00" class="product-price">ZMW110.00</data>
-                    <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHVzAhTP7lTsUMPWjTmYVm4giRVzmJHz5SVmW3vVW8_47ro5K3_8wgFEqsJLQmQs6DCDW2LIJl38ENmLbpDXrQyF5HB6Yr32Nl4eryvG9QBMfDyJMQC2qcUw1A5k2gruGBq2BqJJw=s1360-w1360-h1020-rw" alt="Chicken with Salmon Fillet Cube">
-                </figure>
-                </section>
-                <section class="grilled-fried">
-                    <h3>Grilled &amp; Fried</h3>
-                <figure>
-                    <figcaption>Pork Chops</figcaption>
-                    <p> Juicy pork chops grilled to perfection.</p>
-                    <data value="320.00" class="product-price">ZMW320.00</data>
-                    <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFQafn4BCX_LxqhF8rQH344H9B6gqguclJOp0aDNf1NIGu8yudMmNDu9gl7j9MH2bqdvgBlKeK_ZaTHY0ZZInQgyRBfv_WbCK_98iQnF_9cSmJohwPNAlhTWXCGFMEBjdADOAw=s1360-w1360-h1020-rw" alt="Pork Chops">
-                </figure>
-                <figure>
-                    <figcaption>500g Tbone Steak with Cinnamon Butternut Squash</figcaption>
-                    <p>Tender t-bone steak served with a side of cinnamon butternut squash.</p>
-                    <data value="160.00" class="product-price">ZMW160.00</data>
-                    <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFD0QGNbp2x797l--KPd8SPuHY-ba9R1CEuzYQ5grAQzT4FTxQptm7EehP1gGAxS7mmhao34O_ymxJ2nM8FJaXv75IzItJ-g3S2JRUL33yvc6DYPo1BJZyf_BJruT38iNRZUOYJ=s1360-w1360-h1020-rw" alt="500g Tbone Steak with Cinnamon Butternut Squash">
-                </figure>
-                <figure>
-                    <figcaption>Fillet &amp; Fries</figcaption>
-                    <p>Fillet with a side of crispy fries.</p>
-                    <data value="110.00" class="product-price">ZMW110.00</data>
-                    <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAErTPCnaBosKOhYNx-iC-X3mAmsxi1DdPnXN8uCaNDafkhzkDM9C2Mf8WHs1MQXcsVSUOc08OEioABZKGhyVhyHBxk2pTxnDy4sa8Zzfpy9afIm68UPDx647X4TCwaUiKGInW_9=s1360-w1360-h1020-rw" alt="Fillet & Fries">
-                </figure>
-                </section>
-        </section>
-        <section id="about-us">
-            <h2>About Us</h2>
-            <p>Urban Yard welcomes you to enjoy some delicious steaks, sultry seafood, wood fired pizza and dessert</p>
-        </section>
-        <section id="quick-stats">
-            <h2>Why Choose Us</h2>
-            <div id="cards">
-                <figure>
-                    <h3>5+ Years</h3>
-                    <img src="" alt="5 plus years of experience">
-                    <figcaption>5+ years of serving delicious food</figcaption>
-                </figure>
-                <figure>
-                    <h3>50+ Menu Items</h3>
-                    <img src="" alt="Over 50 menu items">
-                    <figcaption>Over 50 delicious options to choose from</figcaption>
-                </figure>
-                <figure>
-                    <h3>1000+ Happy Customers</h3>
-                    <img src="" alt="Over 1000 happy customers">
-                    <figcaption>Countless satisfied customers over the years</figcaption>
-                </figure>
-            </div>
-        </section>
-        <section id="contact">
-            <div id="contact-info">
-                <h2>Contact & Reservation</h2>
-                <form action="" method="POST">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+      </section>
+      <section id="about-us">
+        <h2>About Us</h2>
+        <p>
+          Urban Yard welcomes you to enjoy some delicious steaks, sultry
+          seafood, wood fired pizza and dessert
+        </p>
+      </section>
+      <section id="quick-stats">
+        <h2>Why Choose Us</h2>
+        <div id="cards">
+          <figure>
+            <h3>5+ Years</h3>
+            <img src="" alt="5 plus years of experience" />
+            <figcaption>5+ years of serving delicious food</figcaption>
+          </figure>
+          <figure>
+            <h3>50+ Menu Items</h3>
+            <img src="" alt="Over 50 menu items" />
+            <figcaption>Over 50 delicious options to choose from</figcaption>
+          </figure>
+          <figure>
+            <h3>1000+ Happy Customers</h3>
+            <img src="" alt="Over 1000 happy customers" />
+            <figcaption>
+              Countless satisfied customers over the years
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <section id="contact">
+        <div id="contact-info">
+          <h2>Contact & Reservation</h2>
+          <form action="" method="POST">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your Name"
+              required
+            />
 
-                    <label for="phone-number">Phone Number</label>
-                    <input type="tel" id="phone-number" name="phone-number" placeholder="Your Phone Number" required>
+            <label for="phone-number">Phone Number</label>
+            <input
+              type="tel"
+              id="phone-number"
+              name="phone-number"
+              placeholder="Your Phone Number"
+              required
+            />
 
-                    <label for="date">Date</label>
-                    <input type="date" id="date" name="date" required>
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required />
 
-                    <label for="number-of-guests">Number of Guests</label>
-                    <input type="number" id="number-of-guests" name="number-of-guests" placeholder="Number of Guests" required>
+            <label for="number-of-guests">Number of Guests</label>
+            <input
+              type="number"
+              id="number-of-guests"
+              name="number-of-guests"
+              placeholder="Number of Guests"
+              required
+            />
 
-                    <label for="special-requests">Special Requests</label>
-                    <textarea id="special-requests" name="special-requests" placeholder="Any special requests?"></textarea>
+            <label for="special-requests">Special Requests</label>
+            <textarea
+              id="special-requests"
+              name="special-requests"
+              placeholder="Any special requests?"
+            ></textarea>
 
-                    <button type="submit">Reserve My Table</button>
-                </form>
-            </div>
-        </section>
-        <section id="reviews">
-              <h2>Reviews</h2>
-                <article>
-                <p>First time being at the Urban Yard. What can I say, pizza was delicious.. I loved it. &amp; the Steak fillet was done perfectly. I enjoyed every bite..The ambiance can do with some work, customer service was really good. Will visit again. 😃 - <strong>Linda Nsunge</strong></p>
-                </article>
-                <article>
-                <p>Is a lovely place! Had the seafood and pizza during the visit each with a unique taste. If you are thinking about a family dinner out or with a loved one who enjoys seafood surely your stop. - <strong>Vishal Sinha</strong></p>
-                </article>
-                <article>
-                <p>Good restaurant for seafood. The seafood plate is nice volume with good taste. The atmosphere is also nice although i prefer a bit music volume down.It seems under renovation this time, so it would be better condition after the construction will be completed. - <strong>O K</strong></p>
-                </article>
-                <p class="star-rating">4.1 ⭐⭐⭐⭐✩ — Based on Google Reviews</p>
-        </section>
-        <section id="location-hours">
-            <h2>Location & Hours</h2>
-            <address>
-                <p>Urban Yard</p>
-                <p>Lusiwasi Rd, Lusaka</p>
-                <p>Lusaka, Zambia</p>
-            </address>
-            <table>
-                <caption>Opening Hours</caption>
-                <thead>
-                    <tr>
-                        <th>Day</th>
-                        <th>Hours</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Monday</td>
-                        <td>closed</td>
-                    </tr>
-                    <tr>
-                        <td>Tuesday - Thursday</td>
-                        <td>4-10PM</td>
-                    </tr>
-                    <tr>
-                        <td>Friday - Saturday</td>
-                        <td>12-10PM</td>
-                    </tr>
-                    <tr>
-                        <td>Sunday</td>
-                        <td>12-8PM</td>
-                    </tr>
-                </tbody>
-            </table>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3846.874333241951!2d28.3202494!3d-15.383290699999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19408b3e63054adf%3A0xd4990916954e1382!2sUrban%20Yard!5e0!3m2!1sen!2szm!4v1783454852929!5m2!1sen!2szm" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Urban Yard Location on Google Maps" aria-label="Urban Yard Location on Google Maps" role="region" tabindex="0">
-            </iframe>
-        </section>
+            <button type="submit">Reserve My Table</button>
+          </form>
+        </div>
+      </section>
+      <section id="reviews">
+        <h2>Reviews</h2>
+        <article>
+          <p>
+            First time being at the Urban Yard. What can I say, pizza was
+            delicious.. I loved it. &amp; the Steak fillet was done perfectly. I
+            enjoyed every bite..The ambiance can do with some work, customer
+            service was really good. Will visit again. 😃 -
+            <strong>Linda Nsunge</strong>
+          </p>
+        </article>
+        <article>
+          <p>
+            Is a lovely place! Had the seafood and pizza during the visit each
+            with a unique taste. If you are thinking about a family dinner out
+            or with a loved one who enjoys seafood surely your stop. -
+            <strong>Vishal Sinha</strong>
+          </p>
+        </article>
+        <article>
+          <p>
+            Good restaurant for seafood. The seafood plate is nice volume with
+            good taste. The atmosphere is also nice although i prefer a bit
+            music volume down.It seems under renovation this time, so it would
+            be better condition after the construction will be completed. -
+            <strong>O K</strong>
+          </p>
+        </article>
+        <p class="star-rating">4.1 ⭐⭐⭐⭐✩ — Based on Google Reviews</p>
+      </section>
+      <section id="location-hours">
+        <h2>Location & Hours</h2>
+        <address>
+          <p>Urban Yard</p>
+          <p>Lusiwasi Rd, Lusaka</p>
+          <p>Lusaka, Zambia</p>
+        </address>
+        <table>
+          <caption>
+            Opening Hours
+          </caption>
+          <thead>
+            <tr>
+              <th>Day</th>
+              <th>Hours</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Monday</td>
+              <td>closed</td>
+            </tr>
+            <tr>
+              <td>Tuesday - Thursday</td>
+              <td>4-10PM</td>
+            </tr>
+            <tr>
+              <td>Friday - Saturday</td>
+              <td>12-10PM</td>
+            </tr>
+            <tr>
+              <td>Sunday</td>
+              <td>12-8PM</td>
+            </tr>
+          </tbody>
+        </table>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3846.874333241951!2d28.3202494!3d-15.383290699999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19408b3e63054adf%3A0xd4990916954e1382!2sUrban%20Yard!5e0!3m2!1sen!2szm!4v1783454852929!5m2!1sen!2szm"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          title="Urban Yard Location on Google Maps"
+          aria-label="Urban Yard Location on Google Maps"
+          role="region"
+          tabindex="0"
+        >
+        </iframe>
+      </section>
     </main>
     <footer>
-        <p>&copy; 2026 Urban Yard</p>
-        <ul>
-            <li><a href="https://www.facebook.com/urbanyard_zambia/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-            <li><a href="https://www.instagram.com/urbanyard_zambia/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-            <li><a href="https://wa.me/260962662727" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
-            <li><a href="tel:+260962662727">+260 96 266 2727</a></li>
-        </ul>
+      <p>&copy; 2026 Urban Yard</p>
+      <ul>
+        <li>
+          <a
+            href="https://www.facebook.com/urbanyard_zambia/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Facebook</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com/urbanyard_zambia/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Instagram</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://wa.me/260962662727"
+            target="_blank"
+            rel="noopener noreferrer"
+            >WhatsApp</a
+          >
+        </li>
+        <li><a href="tel:+260962662727">+260 96 266 2727</a></li>
+      </ul>
     </footer>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
